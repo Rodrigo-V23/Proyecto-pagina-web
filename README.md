@@ -7,6 +7,14 @@ despues se le mostrara una serie de preguntas para que responda relacionado a si
 se le mostrara unas metricas en base a un dataset y por ultimo se le mostrara una serie de especialistas donde el podra escojer a alguno para fijar una cita 
 o una actividad para aliviar su situacion actual
 
+# Instrucciones
+
+1.- escribir su nombre y rut en los bloques que se muestran correspondientemente
+
+2.- responder las preguntas segun lo que usted sienta en ese momento
+
+3.- seleccionar un especialista, si no lo ve necesario, ver alguna recomendacion de actividades para la relajacion
+
 ## Problema a Resolver
 Actualmente no existen suficientes herramientas digitales simples para analizar datos de **estrés en estudiantes** y clasificarlos según factores de salud mental.  
 Esto dificulta la gestión y clasificación de los casos para una **intervención temprana en situaciones de riesgo psicológico**.
@@ -45,10 +53,21 @@ Para operaciones matemáticas y transformar datos.
 
 La necesidad de usar estos paradigmas se justifica con el dominio del problema, el cual requiere objetos (usuarios, diagnósticos) y, a la vez, operaciones puras sobre datos para análisis y  clasificación.
 
-# Instrucciones
+## Dataset
 
-1.- escribir su nombre y rut en los bloques que se muestran correspondientemente
+- **Nombre del dataset:** Student Stress Monitoring Datasets (Kaggle).  
+- **Origen:** Subido por *Md Sultanul Islam Ovi* en la plataforma Kaggle.  
+- **Tamaño:** 2 archivos CSV  
+  - Primer archivo: 21 filas y 1000 columnas.  
+  - Segundo archivo: 26 filas y 843 columnas.  
+- **Licencia:** Licencia pública de Kaggle (Apache Licence, versión 2.0).  
+- **Tipos de datos:** El repositorio indica que los datos son reales y fueron recopilados de una encuesta dirigida a estudiantes a lo largo del mundo, con fines de investigación.  
 
-2.- responder las preguntas segun lo que usted sienta en ese momento
+El dataset nos proporciona dos archivos CSV: **StressLevelDataset.csv** y **Stress_Dataset.csv**.  
+Para este proyecto nos enfocaremos en **StressLevelDataset**, ya que contiene información sobre **factores psicológicos, académicos y sociales** que influyen en los estudiantes.  
 
-3.- seleccionar un especialista, si no lo ve necesario, ver alguna recomendacion de actividades para la relajacion
+Este archivo incluye variables relacionadas con **ansiedad, autoestima, depresión, calidad del sueño, presión académica, entre otros indicadores**, lo que permite **analizar y clasificar a los estudiantes según su nivel de estrés**.  
+De esta manera, podemos identificar el **tipo y grado de estrés** que experimentan, facilitando la clasificación de su **estado de salud mental**.
+
+### Dataset de niveles de estrés (StressLevelDataset)
+![alt text](Diccionario de Datos.png)
