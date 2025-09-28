@@ -10,5 +10,7 @@ o una actividad para aliviar su situacion actual
 # Instrucciones
 
 1.- escribir su nombre y rut en los bloques que se muestran correspondientemente
+
 2.- responder las preguntas segun lo que usted sienta en ese momento
+
 3.- seleccionar un especialista, si no lo ve necesario, ver alguna recomendacion de actividades para la relajacion
