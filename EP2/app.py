@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from modulos.visualizacion import grafico_barras, grafico_pastel, grafico_campana_gauss
-from modulos.analisis import filtrar_por_rango, bienestar_general, correlacion_salud_mental, calcular_estadisticas
+from modulos.visualizacion import *
+from modulos.analisis import *
 
 st.title("Visualización de Datos - Nivel de Estrés en Estudiantes")
 
