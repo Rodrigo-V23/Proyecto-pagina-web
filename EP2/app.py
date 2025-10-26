@@ -1,1 +1,3 @@
-from modulos.modelos import Estudiante
+import streamlit as st
+from modulos import *
+

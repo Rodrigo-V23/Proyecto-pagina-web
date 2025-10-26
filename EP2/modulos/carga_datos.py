@@ -1,5 +1,5 @@
 import pandas as pd
-from .modelos import Estudiante
+from modulos.modelos import Estudiante
 
 def cargar_estudiantes(ruta_csv: str):
     df = pd.read_csv(ruta_csv)
