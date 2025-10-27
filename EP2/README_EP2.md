@@ -54,7 +54,7 @@ Para que el usuario interactue con la pagina o en este caso con los datos y pued
 
 La necesidad de usar estos paradigmas se justifica con el dominio del problema, el cual requiere objetos (usuarios, diagnósticos) y, a la vez, operaciones puras sobre datos para análisis y  clasificación.
 
-###lque puedes hacer
+###Que puedes hacer?
 
 En esta plataforma se utlizo un dataset de kaggle, y con este se puede interactiar de distintas maneras
 
@@ -66,3 +66,4 @@ o tambien por la variable que se quiera analizar
 3.- se hace un EDA para observar el comportamiento de las variables utilizando la media, percentiles o minimos y maximos
 ademas de una correlacion entre la ansiedad, depresion y estres, un analisis del bienestar general de los estudiantes por casos
 y por ultimo se muestra la estadistica separada por genero.
+
