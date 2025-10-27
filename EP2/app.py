@@ -27,46 +27,43 @@ fila_dato = [
     "peer_pressure", "extracurricular_activities", "bullying", "stress_level"
 ]
 
+genero = st.radio("Filtrar por género", ["Todos", "male", "female"], horizontal=True)
+
 # Controles interactivos
 tipo_grafico = st.selectbox("Tipo de gráfico", ["Barras", "Pastel", "Campana Gauss"])
 columna_seleccionada = st.selectbox("Variable a analizar", fila_dato)
-
-# Filtros opcionales por rango
-st.sidebar.header("Filtros por rango")
-columna_filtro = st.sidebar.selectbox("Columna para filtrar", fila_dato)
-min_val = st.sidebar.number_input("Valor mínimo", value=int(data[columna_filtro].min()))
-max_val = st.sidebar.number_input("Valor máximo", value=int(data[columna_filtro].max()))
-
-# Aplicar filtros
-data_filtrada = filtrar_por_rango(data, columna_filtro, min_val, max_val)
-
-# Calcular bienestar
-data_bienestar = bienestar_general(data_filtrada)
-data_filtrada["wellness_score"] = data_bienestar["wellness_score"]
-data_filtrada["wellness_category"] = data_bienestar["wellness_category"]
 
 # Pestañas para gráfico, tabla y estadísticas
 tab1, tab2, tab3 = st.tabs(["Gráficos", "DataFrame", "Estadística descriptiva"])
 
 with tab1:
+    # Filtrar temporalmente por género solo para los gráficos
+    if genero == "Todos":
+        df_grafico = data
+    else:
+        df_grafico = data[data["gender"] == genero]
+
     if tipo_grafico == "Barras":
-        grafico_barras(data_filtrada, columna_seleccionada)
+        grafico_barras(df_grafico, columna_seleccionada)
     elif tipo_grafico == "Pastel":
-        grafico_pastel(data_filtrada, columna_seleccionada)
+        grafico_pastel(df_grafico, columna_seleccionada)
     elif tipo_grafico == "Campana Gauss":
-        grafico_campana_gauss(data_filtrada, columna_seleccionada)
+        grafico_campana_gauss(df_grafico, columna_seleccionada)
 
 with tab2:
-    st.dataframe(data_filtrada, height=300, use_container_width=True)
+    st.dataframe(data, height=300, use_container_width=True)
 
 with tab3:
     st.subheader("Estadísticas descriptivas")
-    st.dataframe(calcular_estadisticas(data_filtrada))
+    st.dataframe(calcular_estadisticas(data))
 
     st.subheader("Correlación entre ansiedad, depresión y estrés")
-    st.dataframe(correlacion_salud_mental(data_filtrada))
+    st.dataframe(correlacion_salud_mental(data))
+
+    st.subheader("Bienestar general de los estudiantes por caso")
+    st.dataframe(bienestar_general(data))
 
     st.subheader("Estadísticas separadas por género")
     # Calcular promedio de cada variable por género
-    estadisticas_genero = data_filtrada.groupby("gender")[fila_dato].mean()
+    estadisticas_genero = data.groupby("gender")[fila_dato].mean()
     st.dataframe(estadisticas_genero)
