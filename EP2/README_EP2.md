@@ -86,4 +86,6 @@ En esta plataforma se utlizo un dataset de kaggle, y con este se puede interacti
  - maximos y minimos
  - Correlacion de variables seleccionadas siendo ansiedad, depresion y estres
  - Analisis del bienestar general de los estudiantes por casos
+    - se aplicaron filtros que dependiendo que tan alto o bajo sea el valor seleccionado de la encuesta se va sumando para determinar si el estado del estudiante es bueno, estable o preocupante
  - Estadisticas separadas por genero 
+
