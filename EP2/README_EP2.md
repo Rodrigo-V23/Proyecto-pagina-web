@@ -9,11 +9,24 @@ o una actividad para aliviar su situacion actual
 
 # Instrucciones
 
-1.- Instalar streamlit "pip install streamlit"
+1.- Instalacion de bibliotecas
 
-2.- poner en el terminal "streamlit run app.py"
+ - streamlit "pip install streamlit"
+ - Seaborn "pip install seaborn"
+ - numpy "pip install numpy
+ - pandas "pip install pandas"
+ - matplotlib "pip install matplotlib"
+
+2.- Iniciar el funcionamiento de la pagina
+
+ - Abrir la terminal de python en visual studio code y escribir "streamlit run app.py"
 
 3.- interactuar con los datos entregados en la plataforma para su analisis
+
+ - Pestaña principal: inicio de la pagina donde puedes ver todas las cosas con las que puedes interactuar
+    - Pestaña 1: Visualizacion de graficos con posibilidad seleccionar la variable la cual quieras visualizar y con un filtro por genero
+    - Pestaña 2: Visualizacion del dataframe que se utiliza en esta pagina
+    - Pestaña 3: Visualizacion de un Analisis exploratorio de datos
 
 ## Problema a Resolver
 Actualmente no existen suficientes herramientas digitales simples para analizar datos de **estrés en estudiantes** y clasificarlos según factores de salud mental.  
@@ -58,13 +71,19 @@ La necesidad de usar estos paradigmas se justifica con el dominio del problema, 
 
 En esta plataforma se utlizo un dataset de kaggle, y con este se puede interactiar de distintas maneras
 
-1.- se visualizan los datos en 3 tipos de graficos, estos pueden ser filtrados por genero del estudiante
-o tambien por la variable que se quiera analizar 
-
+1.- se visualizan los datos en 4 tipos de graficos, estos pueden ser filtrados por genero del estudiante o tambien por la variable que se quiera analizar 
+ - Grafico de barras: Para mostrar que tan frecuente es la respuesta seleccionada de la escuesta
+ - Grafico de pastel: Para mostrar el porcentaje de la respuesta seleccionada de la encuesta
+ - Grafico de campana de gauss: Para mostrar la distribucion de las respuestas de la encuesta
+ - Grafico de matriz de correlacion: para mostrar la correlacion tienen todas las variables
+ 
 2.- Se puede ver el dataframe utilizado en esta pagina
 
-3.- se hace un EDA para observar el comportamiento de las variables utilizando la media, percentiles o minimos y maximos
-ademas de una correlacion entre la ansiedad, depresion y estres, un analisis del bienestar general de los estudiantes por casos
-y por ultimo se muestra la estadistica separada por genero.
-
-
+3.- se hace un EDA para observar el comportamiento de las variables utilizando:
+ - Media
+ - mediana
+ - percentiles
+ - maximos y minimos
+ - Correlacion de variables seleccionadas siendo ansiedad, depresion y estres
+ - Analisis del bienestar general de los estudiantes por casos
+ - Estadisticas separadas por genero 
